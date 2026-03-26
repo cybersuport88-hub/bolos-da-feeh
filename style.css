@@ -7,7 +7,7 @@ body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url('fundo_01.jpg');
+background-image: url('fundo_01.jpg');
     background-repeat: repeat;
     background-size: auto;
     background-attachment: fixed;
@@ -41,10 +41,12 @@ header {
     max-width: 600px;
     margin: 0 auto;
     color: #4a2c20;
-    background: rgba(255, 255, 255, 0.75);
-    padding: 30px 25px;
-    border-radius: 16px;
-    box-shadow: 0 6px 20px rgba(194, 73, 118, 0.15);
+    background: rgba(255, 255, 255, 0.88);
+    padding: 45px 35px;
+    border-radius: 28px;
+    box-shadow: 0 15px 45px rgba(194, 73, 118, 0.15),
+                0 5px 15px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.6);
 }
 
 .logo-textual-top-line {
@@ -172,7 +174,7 @@ h2 {
 .preco-categoria,
 .card-info,
 #instrucoes {
-    background: rgba(255, 255, 255, 0.92);
+    background: rgba(255, 255, 255, 0.88);
     padding: 30px 35px;
     border-radius: 20px;
     margin-bottom: 30px;
@@ -260,18 +262,20 @@ li:last-child {
     text-decoration: none;
     border-radius: 50px;
     font-weight: 700;
-    font-size: 0.8em;
+    font-size: 1.1em;
     margin: 50px auto;
     max-width: 400px;
     transition: all 0.3s ease;
-    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4), 0 3px 10px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4),
+                0 3px 10px rgba(0, 0, 0, 0.15);
     letter-spacing: 1px;
 }
 
 .btn-whatsapp:hover {
     background: linear-gradient(135deg, #1ebe5d 0%, #19b055 100%);
     transform: translateY(-4px);
-    box-shadow: 0 10px 30px rgba(37, 211, 102, 0.5), 0 5px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 30px rgba(37, 211, 102, 0.5),
+                0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .btn-whatsapp:active {
@@ -298,7 +302,7 @@ footer {
 
 .agradecimento-feeh p {
     margin: 8px 0;
-    font-size: 0.8em;
+    font-size: 1.1em;
     font-weight: 500;
     color: #5a3a40;
 }
@@ -339,24 +343,22 @@ footer {
 
 /* --- SUGESTÃO DE SABOR --- */
 .sugestao-sabor {
-    background: rgba(255, 255, 255, 0.90);
-    padding: 25px 30px;
-    border-radius: 20px;
-    text-align: center;
-    max-width: 80%;
-    margin: 40px auto 35px auto;
-    box-shadow: 0 8px 30px rgba(194, 73, 118, 0.15);
-    border: 2px solid rgba(194, 73, 118, 0.3);
+  background: rgba(255, 255, 255, 0.90);
+  padding: 25px 30px;
+  border-radius: 20px;
+  text-align: center;
+  max-width: 80%;
+  margin: 40px auto 35px auto;
+  box-shadow: 0 8px 30px rgba(194, 73, 118, 0.15);
+  border: 2px solid rgba(194, 73, 118, 0.3);
 }
-
 .sugestao-sabor p {
-    margin: 0;
-    font-size: 0.75em;
-    font-family: 'Georgia', serif;
-    font-weight: 600;
-    color: #c24976;
-    font-style: italic;
-    letter-spacing: 0.3px;
+  margin: 0;
+  font-size: 1.1em;
+  font-weight: 600;
+  color: #c24976;
+  font-style: italic;
+  letter-spacing: 0.3px;
 }
 
 /* --- RESPONSIVIDADE --- */
@@ -364,40 +366,51 @@ footer {
     header {
         padding: 30px 15px 20px 15px;
     }
+
+
     .logo-textual-container {
         padding: 35px 20px;
         max-width: 95%;
     }
+
     .logo-textual-title {
         font-size: 2.5em;
     }
+
     .logo-textual-subtitle {
         font-size: 0.85em;
         letter-spacing: 3px;
     }
+
     .logo-imagem img {
         max-width: 200px;
     }
+
     main {
         padding: 10px 15px;
     }
+
     h2 {
         font-size: 1.7em;
     }
+
     .preco-categoria,
     .card-info,
     #instrucoes {
         padding: 20px;
     }
+
     .btn-whatsapp {
         max-width: 90%;
         font-size: 1em;
         padding: 16px;
     }
+
     footer {
         margin: 15px auto 30px auto;
         padding: 35px 20px;
     }
+
     .foto-perfil-agradecimento {
         width: 90px;
         height: 90px;
