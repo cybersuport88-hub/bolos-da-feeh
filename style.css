@@ -41,6 +41,8 @@ header {
     max-width: 600px;
     margin: 0 auto;
     color: #4a2c20;
+   	background: rgba(255, 255, 255, 0.75);
+   	padding: 30px 25px;
 
 .logo-textual-top-line {
     font-size: 0.75em;
