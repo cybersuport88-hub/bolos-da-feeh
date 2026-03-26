@@ -41,13 +41,6 @@ header {
     max-width: 600px;
     margin: 0 auto;
     color: #4a2c20;
-    background: rgba(255, 255, 255, 0.88);
-    padding: 45px 35px;
-    border-radius: 28px;
-    box-shadow: 0 15px 45px rgba(194, 73, 118, 0.15),
-                0 5px 15px rgba(0, 0, 0, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.6);
-}
 
 .logo-textual-top-line {
     font-size: 0.75em;
@@ -354,7 +347,7 @@ footer {
 }
 .sugestao-sabor p {
   margin: 0;
-  font-size: 0.8em;
+  font-size: 0.65em;
    		font-family: 'Georgia', serif;
   font-weight: 600;
   color: #c24976;
