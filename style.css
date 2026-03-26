@@ -110,7 +110,7 @@ header {
     box-shadow: 0 8px 30px rgba(194, 73, 118, 0.25);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     background: transparent;
-    mix-blend-mode: multiply;
+    
 }
 
 .logo-imagem img:hover {
