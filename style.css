@@ -101,9 +101,15 @@ header {
 .logo-imagem {
     margin-top: 25px;
     text-align: center;
+     border-radius: 50%;
 }
 
 .logo-imagem img {
+     border-radius: 50%;
+   }
+
+.101
+img {
     max-width: 280px;
     width: 100%;
     height: auto;
