@@ -43,10 +43,12 @@ header {
     color: #4a2c20;
    	background: rgba(255, 255, 255, 0.75);
    	padding: 30px 25px;
+   }
 
 .logo-textual-top-line {
     font-size: 0.75em;
     font-weight: 500;
+   
     letter-spacing: 3px;
     margin-bottom: 8px;
     color: #c24976;
