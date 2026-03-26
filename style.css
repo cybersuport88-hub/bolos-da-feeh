@@ -1,20 +1,21 @@
+/* =========================================
+   BOLOS DA FEEH - ESTILOS REESTILIZADOS
+   ========================================= */
+
 /* --- ESTILOS GERAIS E PLANO DE FUNDO --- */
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url('fundo_01.jpg'); 
-    background-repeat: repeat;           
-    background-attachment: fixed;        
-    background-size: auto;               
-    color: #4a2c20; 
-    line-height: 1.6;
+    background: linear-gradient(135deg, #f5e6e8 0%, #fdf5f6 50%, #f0e6ea 100%);
+    background-attachment: fixed;
+    color: #4a2c20;
+    line-height: 1.7;
 }
 
-/* --- CABEÇALHO COM LOGO TEXTUAL --- */
+/* --- CABEÇALHO --- */
 header {
-    background-color: transparent; 
-    padding: 40px 20px 20px 20px;
+    padding: 50px 20px 30px 20px;
     text-align: center;
 }
 
@@ -22,124 +23,177 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 550px;
+    max-width: 600px;
     margin: 0 auto;
     color: #4a2c20;
-    /* Fundo mantido um pouco mais sólido apenas no logo para leitura */
-    background-color: rgba(255, 255, 255, 0.85); 
-    padding: 35px 25px; 
-    border-radius: 20px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1); 
-    backdrop-filter: blur(5px);
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.92), rgba(250, 245, 250, 0.88));
+    padding: 45px 35px;
+    border-radius: 28px;
+    box-shadow: 0 15px 45px rgba(194, 73, 118, 0.15),
+                0 5px 15px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.6);
 }
 
 .logo-textual-top-line {
-    font-size: 0.8em;
-    font-weight: 400;
-    letter-spacing: 1px;
-    margin-bottom: 5px;
+    font-size: 0.75em;
+    font-weight: 500;
+    letter-spacing: 3px;
+    margin-bottom: 8px;
+    color: #c24976;
+    text-transform: uppercase;
 }
 
 .logo-textual-title {
-    font-family: 'Cinzel', serif; 
-    font-size: 3.2em;
+    font-family: 'Playfair Display', serif;
+    font-size: 3.8em;
     font-weight: 700;
-    letter-spacing: 2px;
-    margin: 0;
-    line-height: 1;
+    letter-spacing: 1px;
+    margin: 5px 0;
+    line-height: 1.05;
+    background: linear-gradient(135deg, #c24976 0%, #d1618c 50%, #c24976 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: none;
 }
 
 .logo-textual-subtitle {
-    font-size: 1.1em;
-    font-weight: 500;
-    letter-spacing: 3px;
-    margin-top: 5px;
-    border-bottom: 1px solid rgba(74, 44, 32, 0.4); 
-    padding-bottom: 8px;
+    font-size: 1em;
+    font-weight: 600;
+    letter-spacing: 5px;
+    margin-top: 8px;
+    padding-bottom: 15px;
     width: 100%;
+    text-align: center;
+    color: #6b3e4a;
+    border-bottom: 2px solid rgba(194, 73, 118, 0.3);
+    text-transform: uppercase;
 }
 
 .logo-textual-contact {
     font-size: 0.9em;
-    font-weight: 500;
+    font-weight: 600;
     letter-spacing: 1px;
-    margin-top: 10px;
+    margin-top: 18px;
+    color: #8b5a6a;
 }
 
 .logo-textual-found {
-    font-size: 0.8em;
+    font-size: 0.75em;
     font-weight: 500;
-    margin-top: 5px;
+    margin-top: 8px;
+    color: #a07080;
+    letter-spacing: 2px;
+}
+
+/* --- LOGO IMAGEM --- */
+.logo-imagem {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.logo-imagem img {
+    max-width: 280px;
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(194, 73, 118, 0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logo-imagem img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 12px 40px rgba(194, 73, 118, 0.35);
 }
 
 /* --- ESTRUTURA PRINCIPAL --- */
 main {
-    max-width: 800px;
+    max-width: 850px;
     margin: 0 auto;
-    padding: 10px 20px;
+    padding: 15px 25px;
 }
 
 section {
-    margin-bottom: 40px;
+    margin-bottom: 50px;
 }
 
 h2 {
     text-align: center;
-    color: #c24976; 
+    background: linear-gradient(135deg, #c24976 0%, #d1618c 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     font-family: 'Playfair Display', serif;
-    margin-bottom: 25px;
-    font-size: 2em;
-    font-weight: bold;
+    margin-bottom: 30px;
+    font-size: 2.2em;
+    font-weight: 700;
+    letter-spacing: 1px;
 }
 
 .info-gramas {
     text-align: center;
     font-weight: 500;
     color: #4a2c20;
-    margin-bottom: 30px;
-    /* Transparência alterada para 40% */
-    background-color: rgba(255, 255, 255, 0.40);
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    margin-bottom: 35px;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.85), rgba(255, 250, 252, 0.75));
+    padding: 22px 25px;
+    border-radius: 18px;
+    box-shadow: 0 6px 20px rgba(194, 73, 118, 0.1);
+    border-left: 4px solid #c24976;
 }
 
 /* --- FOTO DESTAQUE DO BOLO --- */
 .foto-destaque {
     text-align: center;
-    margin: 30px 0;
+    margin: 40px 0;
 }
 
 .foto-destaque img {
     max-width: 100%;
     height: auto;
-    border-radius: 15px;
-    /* Borda acompanhando os 40% de opacidade */
-    border: 5px solid rgba(255, 255, 255, 0.40); 
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-radius: 20px;
+    border: 6px solid white;
+    box-shadow: 0 10px 40px rgba(194, 73, 118, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* --- BLOCOS DE INFORMAÇÕES (TODOS COM 40% DE TRANSPARÊNCIA) --- */
-.preco-categoria, .card-info, #instrucoes {
-    /* Fundo branco com apenas 40% de opacidade e efeito de vidro */
-    background-color: rgba(255, 255, 255, 0.40); 
-    padding: 25px 30px;
-    border-radius: 15px;
-    margin-bottom: 25px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08); 
-    backdrop-filter: blur(5px); 
+.foto-destaque img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 15px 50px rgba(194, 73, 118, 0.3);
+}
+
+/* --- BLOCOS DE INFORMAÇÕES --- */
+.preco-categoria,
+.card-info,
+#instrucoes {
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.88), rgba(255, 250, 252, 0.8));
+    padding: 30px 35px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 8px 30px rgba(194, 73, 118, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.preco-categoria:hover,
+.card-info:hover,
+#instrucoes:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 40px rgba(194, 73, 118, 0.18);
 }
 
 /* --- ESTILOS INTERNOS DOS BLOCOS --- */
 .preco-categoria h3 {
-    background: #d1618c;
+    background: linear-gradient(135deg, #c24976 0%, #d1618c 100%);
     color: white;
     display: inline-block;
-    padding: 10px 25px;
-    border-radius: 25px;
-    font-size: 1.1em;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-size: 1.15em;
+    font-weight: 600;
     margin-top: 0;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(194, 73, 118, 0.35);
 }
 
 ul {
@@ -149,9 +203,15 @@ ul {
 }
 
 li {
-    padding: 12px 0;
-    border-bottom: 1px dotted rgba(209, 97, 140, 0.6); 
+    padding: 14px 0;
+    border-bottom: 1px dashed rgba(194, 73, 118, 0.4);
     font-weight: 500;
+    color: #5a3a40;
+    transition: color 0.2s ease;
+}
+
+li:hover {
+    color: #c24976;
 }
 
 li:last-child {
@@ -159,11 +219,11 @@ li:last-child {
 }
 
 .card-info {
-    border-left: 6px solid #d1618c;
+    border-left: 5px solid #d1618c;
 }
 
 #instrucoes {
-    border-left: 6px solid #c24976; 
+    border-left: 5px solid #c24976;
 }
 
 #instrucoes h2 {
@@ -171,45 +231,58 @@ li:last-child {
 }
 
 #instrucoes li {
-    font-weight: 600; 
+    font-weight: 600;
 }
 
 .aviso {
-    color: #d32f2f; 
+    color: #d32f2f;
     font-weight: bold;
-    margin-top: 15px;
+    margin-top: 20px;
+    padding: 12px 15px;
+    background: rgba(211, 47, 47, 0.08);
+    border-radius: 10px;
+    border-left: 3px solid #d32f2f;
 }
 
 /* --- BOTÃO DO WHATSAPP --- */
 .btn-whatsapp {
     display: block;
-    background-color: #25d366; 
+    background: linear-gradient(135deg, #25d366 0%, #1ebe5d 100%);
     color: white;
     text-align: center;
-    padding: 18px;
+    padding: 20px 25px;
     text-decoration: none;
-    border-radius: 40px;
-    font-weight: bold;
-    margin: 40px auto;
-    max-width: 350px;
-    transition: background-color 0.3s ease;
-    box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1.1em;
+    margin: 50px auto;
+    max-width: 400px;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4),
+                0 3px 10px rgba(0, 0, 0, 0.15);
+    letter-spacing: 1px;
 }
 
 .btn-whatsapp:hover {
-    background-color: #1ebe5d;
+    background: linear-gradient(135deg, #1ebe5d 0%, #19b055 100%);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(37, 211, 102, 0.5),
+                0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* --- RODAPÉ COM 40% DE TRANSPARÊNCIA --- */
+.btn-whatsapp:active {
+    transform: translateY(-2px);
+}
+
+/* --- RODAPÉ --- */
 footer {
-    max-width: 800px; 
-    margin: 10px auto 60px auto;
-    padding: 40px 20px;
-    /* Transparência alterada para 40% */
-    background-color: rgba(255, 255, 255, 0.40); 
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    backdrop-filter: blur(5px);
+    max-width: 850px;
+    margin: 20px auto 60px auto;
+    padding: 50px 30px;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.85), rgba(255, 250, 252, 0.8));
+    border-radius: 25px;
+    box-shadow: 0 15px 50px rgba(194, 73, 118, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.5);
     text-align: center;
 }
 
@@ -220,33 +293,97 @@ footer {
 }
 
 .agradecimento-feeh p {
-    margin: 5px 0;
+    margin: 8px 0;
     font-size: 1.1em;
-    font-weight: 600;
+    font-weight: 500;
+    color: #5a3a40;
 }
 
 .instagram-link-footer {
-    margin-top: 15px;
+    margin-top: 20px;
 }
 
 .instagram-link-footer a {
     color: #c24976;
     text-decoration: none;
-    font-weight: bold;
-    font-size: 1.1em;
+    font-weight: 700;
+    font-size: 1.2em;
+    transition: all 0.3s ease;
 }
 
 .instagram-link-footer a:hover {
-    text-decoration: underline;
+    color: #d1618c;
+    text-decoration: none;
+    text-shadow: 0 0 15px rgba(194, 73, 118, 0.4);
 }
 
 /* FOTO DA ASSINATURA */
 .foto-perfil-agradecimento {
-    width: 90px; 
-    height: 90px;
-    border-radius: 50%; 
-    border: 4px solid white; 
-    object-fit: cover; 
-    margin-top: 25px; 
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    border: 5px solid white;
+    object-fit: cover;
+    margin-top: 30px;
+    box-shadow: 0 6px 20px rgba(194, 73, 118, 0.25);
+    transition: transform 0.3s ease;
+}
+
+.foto-perfil-agradecimento:hover {
+    transform: scale(1.08);
+}
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 600px) {
+    header {
+        padding: 30px 15px 20px 15px;
+    }
+
+    .logo-textual-container {
+        padding: 35px 20px;
+        max-width: 95%;
+    }
+
+    .logo-textual-title {
+        font-size: 2.5em;
+    }
+
+    .logo-textual-subtitle {
+        font-size: 0.85em;
+        letter-spacing: 3px;
+    }
+
+    .logo-imagem img {
+        max-width: 200px;
+    }
+
+    main {
+        padding: 10px 15px;
+    }
+
+    h2 {
+        font-size: 1.7em;
+    }
+
+    .preco-categoria,
+    .card-info,
+    #instrucoes {
+        padding: 20px;
+    }
+
+    .btn-whatsapp {
+        max-width: 90%;
+        font-size: 1em;
+        padding: 16px;
+    }
+
+    footer {
+        margin: 15px auto 30px auto;
+        padding: 35px 20px;
+    }
+
+    .foto-perfil-agradecimento {
+        width: 90px;
+        height: 90px;
+    }
 }
