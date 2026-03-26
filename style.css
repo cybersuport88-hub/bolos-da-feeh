@@ -3,21 +3,18 @@ body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    
-    /* Configuração Correta da Imagem de Fundo (fundo_01.jpg) */
     background-image: url('fundo_01.jpg'); 
     background-repeat: repeat;           
     background-attachment: fixed;        
     background-size: auto;               
-    
-    color: #4a2c20; /* Marrom escuro para o texto */
+    color: #4a2c20; 
     line-height: 1.6;
 }
 
 /* --- CABEÇALHO COM LOGO TEXTUAL --- */
 header {
     background-color: transparent; 
-    padding: 60px 20px 20px 20px;
+    padding: 40px 20px 20px 20px;
     text-align: center;
 }
 
@@ -25,8 +22,35 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 600px;
+    max-width: 550px;
     margin: 0 auto;
     color: #4a2c20;
-    
-    /* CORREÇÃO AQUI: Fundo 90% sólido para o logo */
+    /* Fundo 85% sólido para garantir a leitura do logo */
+    background-color: rgba(255, 255, 255, 0.85); 
+    padding: 35px 25px; 
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1); 
+    backdrop-filter: blur(5px);
+}
+
+.logo-textual-top-line {
+    font-size: 0.8em;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.logo-textual-title {
+    font-family: 'Cinzel', serif; 
+    font-size: 3.2em;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin: 0;
+    line-height: 1;
+}
+
+.logo-textual-subtitle {
+    font-size: 1.1em;
+    font-weight: 500;
+    letter-spacing: 3px;
+    margin-top: 5
