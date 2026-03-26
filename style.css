@@ -1,4 +1,4 @@
-/* --- ESTILOS GERAIS E PLANO DE FUNDO (Definitivo para legibilidade e efeito) --- */
+/* --- ESTILOS GERAIS E PLANO DE FUNDO --- */
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -14,10 +14,10 @@ body {
     line-height: 1.6;
 }
 
-/* --- CABEÇALHO COM LOGO TEXTUAL --- */
+/* --- CABEÇALHO COM LOGO TEXTUAL (AGORA EM DESTAQUE) --- */
 header {
-    background-color: transparent; /* Cabeçalho transparente */
-    padding: 60px 20px 20px 20px;
+    background-color: transparent; 
+    padding: 40px 20px 20px 20px;
     text-align: center;
 }
 
@@ -25,9 +25,16 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 600px;
+    max-width: 550px;
     margin: 0 auto;
     color: #4a2c20;
+    
+    /* CORREÇÃO AQUI: Fundo menos transparente (90% sólido) para dar leitura ao logo */
+    background-color: rgba(255, 255, 255, 0.90); 
+    padding: 40px 30px; /* Espaço interno para respirar */
+    border-radius: 20px; /* Bordas arredondadas */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1); /* Sombra elegante */
+    backdrop-filter: blur(3px);
 }
 
 .logo-textual-top-line {
@@ -56,206 +63,4 @@ header {
     width: 100%;
 }
 
-.logo-textual-contact {
-    font-size: 0.9em;
-    font-weight: 400;
-    letter-spacing: 1px;
-    margin-top: 10px;
-}
-
-.logo-textual-found {
-    font-size: 0.8em;
-    font-weight: 500;
-    margin-top: 5px;
-}
-
-/* --- CONTEÚDO PRINCIPAL (Solução para legibilidade com efeito translúcido) --- */
-main {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 20px;
-    
-    /* Fundo geral bem transparente */
-    background-color: rgba(255, 255, 255, 0.4); 
-    border-radius: 20px;
-}
-
-section {
-    padding: 10px 0;
-    margin-bottom: 30px;
-}
-
-h2 {
-    text-align: center;
-    color: #c24976; /* Rosa mais forte para destacar */
-    font-family: 'Playfair Display', serif;
-    margin-bottom: 25px;
-    font-weight: bold;
-}
-
-/* --- FOTO DESTAQUE DO BOLO --- */
-.foto-destaque {
-    text-align: center;
-    margin: 30px 0;
-}
-
-.foto-destaque img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 15px;
-    border: 5px solid rgba(255, 255, 255, 0.8); /* Borda transparente */
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-
-/* --- CATEGORIAS DE PREÇOS E LISTAS (Efeito translúcido) --- */
-.preco-categoria {
-    /* Fundo branco semi-transparente (vidro fosco) */
-    background-color: rgba(255, 255, 255, 0.65); 
-    
-    padding: 25px;
-    border-radius: 15px;
-    margin-bottom: 25px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
-    backdrop-filter: blur(3px); /* Efeito de desfoque no fundo */
-}
-
-.preco-categoria h3 {
-    background: #d1618c;
-    color: white;
-    display: inline-block;
-    padding: 10px 20px;
-    border-radius: 25px;
-    font-size: 1.1em;
-    margin-top: 0;
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-li {
-    padding: 10px 0;
-    border-bottom: 1px dotted rgba(209, 97, 140, 0.5); /* Linha divisória translúcida */
-    font-weight: 500;
-}
-
-.info-gramas {
-    text-align: center;
-    font-style: italic;
-    color: #5d4037;
-    margin-bottom: 20px;
-    background-color: rgba(255, 255, 255, 0.65);
-    padding: 10px;
-    border-radius: 10px;
-}
-
-/* --- INFORMAÇÕES E BOTÃO WHATSAPP --- */
-.card-info {
-    /* Fundo branco semi-transparente */
-    background-color: rgba(255, 255, 255, 0.65); 
-    
-    border-left: 6px solid #d1618c;
-    padding: 25px;
-    border-radius: 10px;
-    margin-bottom: 30px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    backdrop-filter: blur(3px);
-}
-
-.card-info p {
-    font-weight: 500;
-}
-
-.btn-whatsapp {
-    display: block;
-    background-color: #25d366; 
-    color: white;
-    text-align: center;
-    padding: 18px;
-    text-decoration: none;
-    border-radius: 40px;
-    font-weight: bold;
-    margin: 30px auto;
-    max-width: 400px;
-    transition: background-color 0.3s ease;
-    box-shadow: 0 4px 10px rgba(37, 211, 102, 0.4);
-}
-
-.btn-whatsapp:hover {
-    background-color: #1ebe5d;
-}
-
-.aviso {
-    color: #d32f2f; /* Vermelho mais forte */
-    font-weight: bold;
-}
-
-/* --- INSTRUÇÕES E TERMOS (A CORREÇÃO: Fundo sólido e texto negrito) --- */
-#instrucoes {
-    /* Fundo quase branco sólido (90%) para leitura perfeita */
-    background-color: rgba(255, 255, 255, 0.90); 
-    
-    padding: 30px 25px;
-    border-radius: 15px;
-    margin-bottom: 30px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.15); /* Sombra mais destacada */
-    border-left: 6px solid #c24976; /* Linha rosa na lateral */
-}
-
-#instrucoes h2 {
-    margin-top: 0;
-}
-
-#instrucoes li {
-    font-weight: 600; /* Letra mais grossa (negrito) */
-    color: #3e241a; /* Marrom mais escuro para contraste máximo */
-    padding: 12px 0;
-}
-
-/* --- RODAPÉ COM SEÇÃO DE AGRADECIMENTO E FOTO --- */
-footer {
-    max-width: 900px; /* Mantém a largura do conteúdo principal */
-    margin: 0 auto 60px auto;
-    padding: 50px 20px;
-    
-    /* Fundo branco semi-transparente (vidro fosco) */
-    background-color: rgba(255, 255, 255, 0.65); 
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    backdrop-filter: blur(3px);
-    
-    text-align: center;
-    color: #4a2c20; /* Marrom escuro */
-}
-
-.agradecimento-feeh {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.agradecimento-feeh p {
-    margin: 10px 0;
-    font-size: 1.2em;
-    font-weight: 500;
-}
-
-.instagram-link-footer a {
-    color: #4a2c20;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.instagram-link-footer a:hover {
-    text-decoration: underline;
-}
-
-/* --- FOTO DA FEEH ASSINATURA (NOVO ESTILO) --- */
-.foto-perfil-agradecimento {
-    width: 80px; /* Tamanho reduzido (assinatura) */
-    height: 80px;
-    border-radius: 50%; /* Foto redonda */
-    border: 3px solid white; /* Moldura branca fina */
-    object-fit: cover; /* Garante que a foto preencha
+.logo-textual
