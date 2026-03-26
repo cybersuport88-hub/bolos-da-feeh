@@ -25,7 +25,7 @@ header {
     max-width: 550px;
     margin: 0 auto;
     color: #4a2c20;
-    /* Fundo 85% sólido para garantir a leitura do logo */
+    /* Fundo mantido um pouco mais sólido apenas no logo para leitura */
     background-color: rgba(255, 255, 255, 0.85); 
     padding: 35px 25px; 
     border-radius: 20px;
@@ -53,4 +53,200 @@ header {
     font-size: 1.1em;
     font-weight: 500;
     letter-spacing: 3px;
-    margin-top: 5
+    margin-top: 5px;
+    border-bottom: 1px solid rgba(74, 44, 32, 0.4); 
+    padding-bottom: 8px;
+    width: 100%;
+}
+
+.logo-textual-contact {
+    font-size: 0.9em;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-top: 10px;
+}
+
+.logo-textual-found {
+    font-size: 0.8em;
+    font-weight: 500;
+    margin-top: 5px;
+}
+
+/* --- ESTRUTURA PRINCIPAL --- */
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+h2 {
+    text-align: center;
+    color: #c24976; 
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 25px;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.info-gramas {
+    text-align: center;
+    font-weight: 500;
+    color: #4a2c20;
+    margin-bottom: 30px;
+    /* Transparência alterada para 40% */
+    background-color: rgba(255, 255, 255, 0.40);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* --- FOTO DESTAQUE DO BOLO --- */
+.foto-destaque {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.foto-destaque img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    /* Borda acompanhando os 40% de opacidade */
+    border: 5px solid rgba(255, 255, 255, 0.40); 
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* --- BLOCOS DE INFORMAÇÕES (TODOS COM 40% DE TRANSPARÊNCIA) --- */
+.preco-categoria, .card-info, #instrucoes {
+    /* Fundo branco com apenas 40% de opacidade e efeito de vidro */
+    background-color: rgba(255, 255, 255, 0.40); 
+    padding: 25px 30px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08); 
+    backdrop-filter: blur(5px); 
+}
+
+/* --- ESTILOS INTERNOS DOS BLOCOS --- */
+.preco-categoria h3 {
+    background: #d1618c;
+    color: white;
+    display: inline-block;
+    padding: 10px 25px;
+    border-radius: 25px;
+    font-size: 1.1em;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    padding: 12px 0;
+    border-bottom: 1px dotted rgba(209, 97, 140, 0.6); 
+    font-weight: 500;
+}
+
+li:last-child {
+    border-bottom: none;
+}
+
+.card-info {
+    border-left: 6px solid #d1618c;
+}
+
+#instrucoes {
+    border-left: 6px solid #c24976; 
+}
+
+#instrucoes h2 {
+    margin-top: 0;
+}
+
+#instrucoes li {
+    font-weight: 600; 
+}
+
+.aviso {
+    color: #d32f2f; 
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+/* --- BOTÃO DO WHATSAPP --- */
+.btn-whatsapp {
+    display: block;
+    background-color: #25d366; 
+    color: white;
+    text-align: center;
+    padding: 18px;
+    text-decoration: none;
+    border-radius: 40px;
+    font-weight: bold;
+    margin: 40px auto;
+    max-width: 350px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+}
+
+.btn-whatsapp:hover {
+    background-color: #1ebe5d;
+}
+
+/* --- RODAPÉ COM 40% DE TRANSPARÊNCIA --- */
+footer {
+    max-width: 800px; 
+    margin: 10px auto 60px auto;
+    padding: 40px 20px;
+    /* Transparência alterada para 40% */
+    background-color: rgba(255, 255, 255, 0.40); 
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    backdrop-filter: blur(5px);
+    text-align: center;
+}
+
+.agradecimento-feeh {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.agradecimento-feeh p {
+    margin: 5px 0;
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+.instagram-link-footer {
+    margin-top: 15px;
+}
+
+.instagram-link-footer a {
+    color: #c24976;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.instagram-link-footer a:hover {
+    text-decoration: underline;
+}
+
+/* FOTO DA ASSINATURA */
+.foto-perfil-agradecimento {
+    width: 90px; 
+    height: 90px;
+    border-radius: 50%; 
+    border: 4px solid white; 
+    object-fit: cover; 
+    margin-top: 25px; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
