@@ -1,4 +1,3 @@
-109
 /* =========================================
    BOLOS DA FEEH - ESTILOS REESTILIZADOS
    ========================================= */
@@ -8,7 +7,7 @@ body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-background-image: url('fundo_01.jpg');
+    background-image: url('fundo_01.jpg');
     background-repeat: repeat;
     background-size: auto;
     background-attachment: fixed;
@@ -102,17 +101,15 @@ header {
 .logo-imagem {
     margin-top: 25px;
     text-align: center;
-     border-radius: 50%;
+    border-radius: 50%;
 }
 
 .logo-imagem img {
-     border-radius: 50%;
-     109
-width: 150px;     height:
-     height: 150px;
-   }
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+}
 
-.101
 img {
     max-width: 280px;
     width: 100%;
@@ -353,22 +350,23 @@ footer {
 
 /* --- SUGESTÃO DE SABOR --- */
 .sugestao-sabor {
-  background: rgba(255, 255, 255, 0.90);
-  padding: 25px 30px;
-  border-radius: 20px;
-  text-align: center;
-  max-width: 80%;
-  margin: 40px auto 35px auto;
-  box-shadow: 0 8px 30px rgba(194, 73, 118, 0.15);
-  border: 2px solid rgba(194, 73, 118, 0.3);
+    background: rgba(255, 255, 255, 0.90);
+    padding: 25px 30px;
+    border-radius: 20px;
+    text-align: center;
+    max-width: 80%;
+    margin: 40px auto 35px auto;
+    box-shadow: 0 8px 30px rgba(194, 73, 118, 0.15);
+    border: 2px solid rgba(194, 73, 118, 0.3);
 }
+
 .sugestao-sabor p {
-  margin: 0;
-  font-size: 0.72em;
-  font-weight: 600;
-  color: #c24976;
-  font-style: italic;
-  letter-spacing: 0.3px;
+    margin: 0;
+    font-size: 0.72em;
+    font-weight: 600;
+    color: #c24976;
+    font-style: italic;
+    letter-spacing: 0.3px;
 }
 
 /* --- RESPONSIVIDADE --- */
@@ -376,7 +374,6 @@ footer {
     header {
         padding: 30px 15px 20px 15px;
     }
-
 
     .logo-textual-container {
         padding: 35px 20px;
