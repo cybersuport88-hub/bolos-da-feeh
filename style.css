@@ -40,7 +40,7 @@ header {
     max-width: 850px; /* ATUALIZADO: Largura igual aos outros blocos */
     margin: 0 auto;
     /* ATUALIZADO: Fundo com a mesma transparência dos outros itens */
-    background: rgba(255, 255, 255, 0.88); 
+    background: rgba(255, 255, 255, 1.00); 
     padding: 50px 30px;
     border-radius: 28px;
     /* Sombra suave e elegante em volta do cartão */
@@ -338,7 +338,7 @@ footer {
 
 .sugestao-sabor p {
     margin: 0;
-    font-size: 1.2em;
+    font-size: 0.8em;
     font-weight: 600;
     color: #c24976;
     font-style: italic;
