@@ -7,6 +7,7 @@ body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
+    /* Fundo Principal Fixo - Onde tudo vai flutuar em cima */
     background-image: url('fundo_01.jpg');
     background-repeat: repeat;
     background-size: auto;
@@ -16,7 +17,8 @@ body {
     position: relative;
 }
 
-/* Overlay branco com 40% de transparência sobre a imagem de fundo */
+/* Overlay branco com 40% de transparência sobre a imagem de fundo 
+   para garantir a leitura de todo o site */
 body::before {
     content: '';
     position: fixed;
@@ -28,69 +30,60 @@ body::before {
     z-index: -1;
 }
 
-/* --- CABEÇALHO --- */
+/* --- CABEÇALHO UNIFICADO --- */
 header {
-    padding: 50px 20px 30px 20px;
+    padding: 60px 20px 40px 20px;
     text-align: center;
 }
 
-/* NOVO ESTILO: Container unificado para Logo e Texto lado a lado */
-.logo-card {
-    display: flex; /* Ativa o modo lado a lado */
-    flex-direction: row; /* Desktop: imagem na esquerda, texto na direita */
-    align-items: center; /* Centraliza os elementos verticalmente */
-    justify-content: center; /* Centraliza o bloco na tela */
-    max-width: 800px; /* Aumentado para acomodar os dois elementos */
+/* O container principal agora NÃO TEM FUNDO BRANCO, NEM SOMBRAS, NEM BORDAS.
+   Ele é transparente para que o conteúdo flutue no fundo da página. */
+.header-unified-container {
+    display: flex;
+    flex-direction: column; /* Empilha Texto em cima, Logo embaixo */
+    align-items: center;
+    justify-content: center;
+    max-width: 800px;
     margin: 0 auto;
     color: #4a2c20;
-    background: rgba(255, 255, 255, 0.88); /* Fundo branco semi-transparente */
-    padding: 40px;
-    border-radius: 28px;
-    box-shadow: 0 15px 45px rgba(194, 73, 118, 0.15),
-                0 5px 15px rgba(0, 0, 0, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.6);
+    background: none; /* FUNDO REMOVIDO */
+    box-shadow: none; /* SOMBRA REMOVIDA */
+    border: none;     /* BORDA REMOVIDA */
+    padding: 0;
 }
 
-/* Configuração da área da imagem */
-.logo-imagem {
-    margin-right: 45px; /* Espaço entre a imagem e o texto */
-    flex-shrink: 0; /* Impede a imagem de espremer */
-}
-
-.logo-imagem img {
-    border-radius: 50%; /* Mantém redondo */
-    width: 180px; /* Tamanho ajustado e aumentado! */
-    height: 180px; /* Tamanho ajustado e aumentado! */
-    object-fit: cover; /* Garante que o logo preencha o círculo */
-    display: block;
-}
-
-/* Configuração da área do texto */
-.logo-textual-content {
+/* Configuração do bloco de texto */
+.header-text-block {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Alinha o texto à esquerda (perto da logo) */
-    text-align: left;
-    flex: 1; /* Ocupa o resto do espaço disponível */
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 30px; /* Espaço antes do logo */
 }
 
 .logo-textual-title {
     font-family: 'Playfair Display', serif;
-    font-size: 3.5em; /* Ligeiramente menor para caber melhor */
+    font-size: 3.8em;
     font-weight: 700;
     letter-spacing: 1px;
-    margin: 0;
-    line-height: 1;
+    margin: 5px 0;
+    line-height: 1.05;
     color: #c24976;
+    /* Adiciona uma sombra suave no texto para garantir leitura no fundo */
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
 }
 
 .logo-textual-subtitle {
     font-size: 1em;
     font-weight: 600;
-    letter-spacing: 4px;
+    letter-spacing: 5px;
     margin-top: 8px;
-    padding-bottom: 12px;
+    padding-bottom: 15px;
+    width: 100%;
+    text-align: center;
     color: #6b3e4a;
+    /* Mantemos a linha, mas flutuando no fundo */
     border-bottom: 2px solid rgba(194, 73, 118, 0.3);
     text-transform: uppercase;
 }
@@ -99,8 +92,33 @@ header {
     font-size: 0.9em;
     font-weight: 600;
     letter-spacing: 1px;
-    margin-top: 15px;
+    margin-top: 18px;
     color: #8b5a6a;
+}
+
+/* Configuração do bloco do logotipo */
+.header-logo-block {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* A IMAGEM DO LOGO AGORA NÃO TEM FORMATO CIRCULAR FORÇADO.
+   Ela flutua no fundo como um elemento único. */
+.header-logo-block img {
+    /* Mude border-radius para 0 ou remova a linha */
+    border-radius: 0; 
+    
+    width: 280px; /* Mantém o tamanho grande que você queria */
+    height: auto;
+    
+    background-color: transparent; /* Garante que o fundo seja transparente */
+    box-shadow: none;             /* REMOVE SOMBRAS DA IMAGEM */
+    border: none;                 /* REMOVE BORDAS BRANCAS */
+    
+    object-fit: contain;
+    display: block;
 }
 
 /* --- ESTRUTURA PRINCIPAL --- */
@@ -351,31 +369,13 @@ footer {
 /* --- RESPONSIVIDADE --- */
 @media (max-width: 600px) {
     header {
-        padding: 30px 15px 20px 15px;
+        padding: 40px 15px 20px 15px;
     }
 
-    /* Ajuste para celular: empilha de volta verticalmente */
-    .logo-card {
-        flex-direction: column; 
-        padding: 30px 20px;
+    .header-unified-container {
         max-width: 95%;
     }
     
-    .logo-imagem {
-        margin-right: 0; /* Remove espaço lateral */
-        margin-bottom: 20px; /* Adiciona espaço inferior */
-    }
-
-    .logo-imagem img {
-        width: 150px; /* Reduz um pouco o tamanho no celular */
-        height: 150px;
-    }
-
-    .logo-textual-content {
-        align-items: center; /* Centraliza o texto no celular */
-        text-align: center;
-    }
-
     .logo-textual-title {
         font-size: 2.5em;
     }
@@ -383,6 +383,10 @@ footer {
     .logo-textual-subtitle {
         font-size: 0.85em;
         letter-spacing: 3px;
+    }
+
+    .header-logo-block img {
+        width: 200px; /* Reduz um pouco o tamanho no celular */
     }
 
     main {
