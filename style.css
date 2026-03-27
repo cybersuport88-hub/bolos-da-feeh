@@ -108,6 +108,7 @@ header {
     border-radius: 50%;
     width: 280px;  /* Ajustado para 280px */
     height: 280px; /* Ajustado para 280px */
+    background-color: #ffffff; /* Fundo branco 100% sólido só para o logo! */
 }
 
 img {
