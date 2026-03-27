@@ -106,8 +106,8 @@ header {
 
 .logo-imagem img {
     border-radius: 50%;
-    width: 180px;
-    height: 180px;
+    width: 280px;  /* Ajustado para 280px */
+    height: 280px; /* Ajustado para 280px */
 }
 
 img {
@@ -362,13 +362,13 @@ footer {
 
 .sugestao-sabor p {
     margin: 0;
-    font-size: 0.8em; /* Tamanho aumentado para dar destaque */
+    font-size: 1.2em; /* Tamanho ajustado e aumentado! */
     font-weight: 600;
     color: #c24976;
     font-style: italic;
     letter-spacing: 0.3px;
 }
-}
+/* A chave "}" extra que tinha aqui foi removida! */
 
 /* --- RESPONSIVIDADE --- */
 @media (max-width: 600px) {
@@ -391,7 +391,7 @@ footer {
     }
 
     .logo-imagem img {
-        max-width: 200px;
+        max-width: 280px; /* Ajustado para permitir que o logo fique grande no celular também */
     }
 
     main {
