@@ -106,8 +106,8 @@ header {
 
 .logo-imagem img {
     border-radius: 50%;
-    width: 150px;
-    height: 150px;
+    width: 180px;
+    height: 180px;
 }
 
 img {
@@ -362,7 +362,7 @@ footer {
 
 .sugestao-sabor p {
     margin: 0;
-    font-size: 1.2em; /* Tamanho aumentado para dar destaque */
+    font-size: 0.8em; /* Tamanho aumentado para dar destaque */
     font-weight: 600;
     color: #c24976;
     font-style: italic;
