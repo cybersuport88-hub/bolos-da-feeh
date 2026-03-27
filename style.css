@@ -7,7 +7,6 @@ body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    /* Fundo Principal Fixo - Onde tudo vai flutuar em cima */
     background-image: url('fundo_01.jpg');
     background-repeat: repeat;
     background-size: auto;
@@ -17,8 +16,7 @@ body {
     position: relative;
 }
 
-/* Overlay branco com 40% de transparência sobre a imagem de fundo 
-   para garantir a leitura de todo o site */
+/* Overlay branco com 40% de transparência sobre a imagem de fundo */
 body::before {
     content: '';
     position: fixed;
@@ -30,95 +28,75 @@ body::before {
     z-index: -1;
 }
 
-/* --- CABEÇALHO UNIFICADO --- */
+/* --- CABEÇALHO (O CARTÃO BRANCO) --- */
 header {
-    padding: 60px 20px 40px 20px;
-    text-align: center;
+    padding: 40px 20px 20px 20px;
 }
 
-/* O container principal agora NÃO TEM FUNDO BRANCO, NEM SOMBRAS, NEM BORDAS.
-   Ele é transparente para que o conteúdo flutue no fundo da página. */
-.header-unified-container {
-    display: flex;
-    flex-direction: column; /* Empilha Texto em cima, Logo embaixo */
-    align-items: center;
-    justify-content: center;
-    max-width: 800px;
-    margin: 0 auto;
-    color: #4a2c20;
-    background: none; /* FUNDO REMOVIDO */
-    box-shadow: none; /* SOMBRA REMOVIDA */
-    border: none;     /* BORDA REMOVIDA */
-    padding: 0;
-}
-
-/* Configuração do bloco de texto */
-.header-text-block {
+.cartao-cabecalho {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
-    width: 100%;
-    margin-bottom: 30px; /* Espaço antes do logo */
+    max-width: 450px; /* Mais estreito para dar formato de cartão vertical */
+    margin: 0 auto;
+    background: #ffffff; /* Fundo totalmente branco */
+    padding: 50px 30px;
+    border-radius: 28px;
+    /* Sombra suave e elegante em volta do cartão */
+    box-shadow: 0 10px 40px rgba(194, 73, 118, 0.15); 
 }
 
 .logo-textual-title {
     font-family: 'Playfair Display', serif;
-    font-size: 3.8em;
+    font-size: 3.4em;
     font-weight: 700;
     letter-spacing: 1px;
-    margin: 5px 0;
-    line-height: 1.05;
+    margin: 0;
+    line-height: 1.1; /* Juntou mais as linhas BOLOS DA e FEEH */
     color: #c24976;
-    /* Adiciona uma sombra suave no texto para garantir leitura no fundo */
-    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+    text-align: center;
 }
 
 .logo-textual-subtitle {
-    font-size: 1em;
+    font-size: 0.9em;
     font-weight: 600;
-    letter-spacing: 5px;
-    margin-top: 8px;
-    padding-bottom: 15px;
-    width: 100%;
-    text-align: center;
+    letter-spacing: 4px;
+    margin-top: 15px;
     color: #6b3e4a;
-    /* Mantemos a linha, mas flutuando no fundo */
-    border-bottom: 2px solid rgba(194, 73, 118, 0.3);
     text-transform: uppercase;
+    text-align: center;
+}
+
+/* A linha fina rosada que separa o título do telefone */
+.linha-divisoria {
+    width: 90%;
+    height: 1px;
+    background-color: rgba(194, 73, 118, 0.3);
+    margin: 25px 0;
 }
 
 .logo-textual-contact {
-    font-size: 0.9em;
+    font-size: 0.95em;
     font-weight: 600;
     letter-spacing: 1px;
-    margin-top: 18px;
     color: #8b5a6a;
+    text-align: center;
 }
 
-/* Configuração do bloco do logotipo */
+/* O logotipo fundido no cartão, sem recortes redondos! */
 .header-logo-block {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin-top: 35px;
+    text-align: center;
 }
 
-/* A IMAGEM DO LOGO AGORA NÃO TEM FORMATO CIRCULAR FORÇADO.
-   Ela flutua no fundo como um elemento único. */
 .header-logo-block img {
-    /* Mude border-radius para 0 ou remova a linha */
-    border-radius: 0; 
-    
-    width: 280px; /* Mantém o tamanho grande que você queria */
+    width: 250px;
     height: auto;
-    
-    background-color: transparent; /* Garante que o fundo seja transparente */
-    box-shadow: none;             /* REMOVE SOMBRAS DA IMAGEM */
-    border: none;                 /* REMOVE BORDAS BRANCAS */
-    
-    object-fit: contain;
+    border-radius: 0; /* Remove o corte redondo */
+    box-shadow: none; /* Remove a sombra da imagem */
+    border: none;     /* Remove a borda branca */
     display: block;
+    margin: 0 auto;
 }
 
 /* --- ESTRUTURA PRINCIPAL --- */
@@ -369,24 +347,25 @@ footer {
 /* --- RESPONSIVIDADE --- */
 @media (max-width: 600px) {
     header {
-        padding: 40px 15px 20px 15px;
+        padding: 30px 15px 15px 15px;
     }
 
-    .header-unified-container {
+    .cartao-cabecalho {
+        padding: 40px 20px;
         max-width: 95%;
     }
     
     .logo-textual-title {
-        font-size: 2.5em;
+        font-size: 2.8em;
     }
 
     .logo-textual-subtitle {
-        font-size: 0.85em;
+        font-size: 0.75em;
         letter-spacing: 3px;
     }
 
     .header-logo-block img {
-        width: 200px; /* Reduz um pouco o tamanho no celular */
+        width: 200px; /* Reduz um pouco o tamanho do logo no celular */
     }
 
     main {
