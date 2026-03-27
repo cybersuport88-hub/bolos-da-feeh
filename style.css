@@ -91,7 +91,7 @@ header {
 }
 
 .header-logo-block img {
-    width: 350px;
+    width: 550px;
     height: auto;
     border-radius: 0; /* Remove o corte redondo */
     box-shadow: none; /* Remove a sombra da imagem */
