@@ -28,7 +28,7 @@ body::before {
     z-index: -1;
 }
 
-/* --- CABEÇALHO (O CARTÃO BRANCO) --- */
+/* --- CABEÇALHO (O CARTÃO PRINCIPAL) --- */
 header {
     padding: 40px 20px 20px 20px;
 }
@@ -37,9 +37,10 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 450px; /* Mais estreito para dar formato de cartão vertical */
+    max-width: 850px; /* ATUALIZADO: Largura igual aos outros blocos */
     margin: 0 auto;
-    background: #ffffff; /* Fundo totalmente branco */
+    /* ATUALIZADO: Fundo com a mesma transparência dos outros itens */
+    background: rgba(255, 255, 255, 0.88); 
     padding: 50px 30px;
     border-radius: 28px;
     /* Sombra suave e elegante em volta do cartão */
@@ -352,7 +353,7 @@ footer {
 
     .cartao-cabecalho {
         padding: 40px 20px;
-        max-width: 95%;
+        max-width: 95%; /* Mantém o formato de cartão no celular */
     }
     
     .logo-textual-title {
