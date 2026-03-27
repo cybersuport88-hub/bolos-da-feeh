@@ -34,63 +34,62 @@ header {
     text-align: center;
 }
 
-.logo-textual-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 600px;
+/* NOVO ESTILO: Container unificado para Logo e Texto lado a lado */
+.logo-card {
+    display: flex; /* Ativa o modo lado a lado */
+    flex-direction: row; /* Desktop: imagem na esquerda, texto na direita */
+    align-items: center; /* Centraliza os elementos verticalmente */
+    justify-content: center; /* Centraliza o bloco na tela */
+    max-width: 800px; /* Aumentado para acomodar os dois elementos */
     margin: 0 auto;
     color: #4a2c20;
-    
-    /* Configuração do fundo com o logo.png */
-    background-image: url('logo.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    
-    padding: 0; /* Zerado, o padding agora fica no overlay */
+    background: rgba(255, 255, 255, 0.88); /* Fundo branco semi-transparente */
+    padding: 40px;
     border-radius: 28px;
     box-shadow: 0 15px 45px rgba(194, 73, 118, 0.15),
                 0 5px 15px rgba(0, 0, 0, 0.08);
     border: 1px solid rgba(255, 255, 255, 0.6);
-    position: relative;
-    overflow: hidden;
 }
 
-/* Camada que cria a transparência branca em cima do logo para o texto brilhar */
-.logo-content-overlay {
+/* Configuração da área da imagem */
+.logo-imagem {
+    margin-right: 45px; /* Espaço entre a imagem e o texto */
+    flex-shrink: 0; /* Impede a imagem de espremer */
+}
+
+.logo-imagem img {
+    border-radius: 50%; /* Mantém redondo */
+    width: 180px; /* Tamanho ajustado e aumentado! */
+    height: 180px; /* Tamanho ajustado e aumentado! */
+    object-fit: cover; /* Garante que o logo preencha o círculo */
+    display: block;
+}
+
+/* Configuração da área do texto */
+.logo-textual-content {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    box-sizing: border-box;
-    /* 85% de branco. Se quiser o logo mais visível, mude 0.85 para 0.70 ou menos */
-    background-color: rgba(255, 255, 255, 0.85); 
-    padding: 45px 35px;
-    position: relative;
-    z-index: 2;
+    align-items: flex-start; /* Alinha o texto à esquerda (perto da logo) */
+    text-align: left;
+    flex: 1; /* Ocupa o resto do espaço disponível */
 }
 
 .logo-textual-title {
     font-family: 'Playfair Display', serif;
-    font-size: 3.8em;
+    font-size: 3.5em; /* Ligeiramente menor para caber melhor */
     font-weight: 700;
     letter-spacing: 1px;
-    margin: 5px 0;
-    line-height: 1.05;
+    margin: 0;
+    line-height: 1;
     color: #c24976;
 }
 
 .logo-textual-subtitle {
     font-size: 1em;
     font-weight: 600;
-    letter-spacing: 5px;
+    letter-spacing: 4px;
     margin-top: 8px;
-    padding-bottom: 15px;
-    width: 100%;
-    text-align: center;
+    padding-bottom: 12px;
     color: #6b3e4a;
     border-bottom: 2px solid rgba(194, 73, 118, 0.3);
     text-transform: uppercase;
@@ -100,7 +99,7 @@ header {
     font-size: 0.9em;
     font-weight: 600;
     letter-spacing: 1px;
-    margin-top: 18px;
+    margin-top: 15px;
     color: #8b5a6a;
 }
 
@@ -355,12 +354,26 @@ footer {
         padding: 30px 15px 20px 15px;
     }
 
-    .logo-textual-container {
+    /* Ajuste para celular: empilha de volta verticalmente */
+    .logo-card {
+        flex-direction: column; 
+        padding: 30px 20px;
         max-width: 95%;
     }
     
-    .logo-content-overlay {
-        padding: 35px 20px;
+    .logo-imagem {
+        margin-right: 0; /* Remove espaço lateral */
+        margin-bottom: 20px; /* Adiciona espaço inferior */
+    }
+
+    .logo-imagem img {
+        width: 150px; /* Reduz um pouco o tamanho no celular */
+        height: 150px;
+    }
+
+    .logo-textual-content {
+        align-items: center; /* Centraliza o texto no celular */
+        text-align: center;
     }
 
     .logo-textual-title {
