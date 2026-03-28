@@ -7,6 +7,7 @@ body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
+    /* Certifique-se de que o nome do ficheiro de fundo é exato */
     background-image: url('fundo_01.jpg');
     background-repeat: repeat;
     background-size: auto;
@@ -16,6 +17,7 @@ body {
     position: relative;
 }
 
+/* Overlay branco com 40% de transparência sobre a imagem de fundo para garantir a leitura */
 body::before {
     content: '';
     position: fixed;
@@ -36,11 +38,13 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 850px; 
+    max-width: 850px; /* Alinhado com a largura dos outros blocos */
     margin: 0 auto;
+    /* Fundo branco semi-transparente (88%) - O FUNDO RESTAURADO AQUI */
     background: rgba(255, 255, 255, 0.88); 
     padding: 50px 30px;
     border-radius: 28px;
+    /* Sombra suave e elegante em volta do cartão */
     box-shadow: 0 10px 40px rgba(194, 73, 118, 0.15); 
 }
 
@@ -50,7 +54,7 @@ header {
     font-weight: 700;
     letter-spacing: 1px;
     margin: 0;
-    line-height: 1.1; 
+    line-height: 1.1; /* Juntou mais as linhas BOLOS DA e FEEH */
     color: #c24976;
     text-align: center;
 }
@@ -65,6 +69,7 @@ header {
     text-align: center;
 }
 
+/* A linha fina rosada que separa o título do telefone */
 .linha-divisoria {
     width: 90%;
     height: 1px;
@@ -80,17 +85,18 @@ header {
     text-align: center;
 }
 
+/* O logotipo fundido no cartão, sem recortes redondos! */
 .header-logo-block {
     margin-top: 35px;
     text-align: center;
 }
 
 .header-logo-block img {
-    width: 350px; 
+    width: 350px; /* Tamanho da logo aumentado */
     height: auto;
-    border-radius: 0;
-    box-shadow: none;
-    border: none;
+    border-radius: 0; /* Remove o corte redondo */
+    box-shadow: none; /* Remove a sombra da imagem */
+    border: none;     /* Remove a borda branca */
     display: block;
     margin: 0 auto;
 }
@@ -116,7 +122,7 @@ h2 {
     letter-spacing: 1px;
 }
 
-/* --- CARROSSEL DE FOTOS --- */
+/* --- CARROSSEL DE FOTOS (Sem cortes nos bolos!) --- */
 .carrossel-container {
     position: relative;
     max-width: 100%;
@@ -125,23 +131,25 @@ h2 {
     overflow: hidden;
     border: 6px solid white;
     box-shadow: 0 10px 40px rgba(194, 73, 118, 0.2);
+    /* Fundo rosa claro para preencher as margens suaves */
     background-color: #f9e9f0; 
 }
 
 .slide {
-    display: none; 
+    display: none; /* Esconde todas as fotos por padrão */
     width: 100%;
 }
 
 .slide.ativa {
-    display: block; 
-    animation: fade 0.8s; 
+    display: block; /* Mostra apenas a foto ativa */
+    animation: fade 0.8s; /* Animação suave na transição */
 }
 
+/* Exibe a foto inteira sem cortar nada */
 .slide img {
     width: 100%;
     max-height: 650px; 
-    object-fit: contain; 
+    object-fit: contain; /* 'contain' exibe a foto inteira sem cortes */
     display: block;
 }
 
@@ -159,7 +167,7 @@ h2 {
     transition: 0.3s ease;
     border-radius: 0 8px 8px 0;
     user-select: none;
-    background-color: rgba(194, 73, 118, 0.6); 
+    background-color: rgba(194, 73, 118, 0.6); /* Fundo rosa transparente */
     border: none;
 }
 
@@ -169,7 +177,7 @@ h2 {
 }
 
 .prev:hover, .next:hover {
-    background-color: rgba(194, 73, 118, 1); 
+    background-color: rgba(194, 73, 118, 1); /* Rosa forte ao passar o mouse */
 }
 
 @keyframes fade {
@@ -177,25 +185,27 @@ h2 {
     to {opacity: 1}
 }
 
-/* --- BLOCOS DE INFORMAÇÕES --- */
+/* --- BLOCOS DE INFORMAÇÕES (Preços, Card, Instruções) --- */
 .info-gramas {
     text-align: center;
-    font-size: 0.8em; /* TAMANHO DA LETRA AUMENTADO AQUI! */
-    font-weight: 600; /* Deixei a letra um pouquinho mais gordinha/negrito para dar mais leitura */
+    /* Tamanho de fonte aumentado e negrito para visibilidade */
+    font-size: 0.8em; 
+    font-weight: 600; 
     color: #4a2c20;
     margin-bottom: 35px;
-    background: rgba(255, 255, 255, 0.85);
+    /* Fundo semi-transparente restaurado aqui */
+    background: rgba(255, 255, 255, 0.85); 
     padding: 22px 25px;
     border-radius: 18px;
     box-shadow: 0 6px 20px rgba(194, 73, 118, 0.1);
     border-left: 4px solid #c24976;
 }
-}
 
 .preco-categoria,
 .card-info,
 #instrucoes {
-    background: rgba(255, 255, 255, 0.88);
+    /* Fundo semi-transparente (88%) restaurado para todos os blocos */
+    background: rgba(255, 255, 255, 0.88); 
     padding: 30px 35px;
     border-radius: 20px;
     margin-bottom: 30px;
@@ -272,8 +282,9 @@ li:last-child {
     border-left: 3px solid #d32f2f;
 }
 
-/* --- SUGESTÃO DE SABOR --- */
+/* --- SUGESTÃO DE SABOR (Padronizado como os outros) --- */
 .sugestao-sabor {
+    /* Fundo semi-transparente (88%) e sombras padronizados aqui */
     background: rgba(255, 255, 255, 0.88); 
     padding: 30px 35px;
     border-radius: 20px;
@@ -329,7 +340,8 @@ footer {
     max-width: 850px;
     margin: 20px auto 60px auto;
     padding: 50px 30px;
-    background: rgba(255, 255, 255, 0.85);
+    /* Fundo semi-transparente restaurado aqui */
+    background: rgba(255, 255, 255, 0.85); 
     border-radius: 25px;
     box-shadow: 0 15px 50px rgba(194, 73, 118, 0.15);
     border: 1px solid rgba(255, 255, 255, 0.5);
@@ -382,7 +394,7 @@ footer {
     transform: scale(1.08);
 }
 
-/* --- RESPONSIVIDADE --- */
+/* --- RESPONSIVIDADE (Ajustes para celulares) --- */
 @media (max-width: 600px) {
     header {
         padding: 30px 15px 15px 15px;
@@ -390,7 +402,7 @@ footer {
 
     .cartao-cabecalho {
         padding: 40px 20px;
-        max-width: 95%; 
+        max-width: 95%; /* Mantém o formato de cartão no celular */
     }
     
     .logo-textual-title {
@@ -415,9 +427,10 @@ footer {
     }
 
     .slide img {
-        max-height: 400px; 
+        max-height: 400px; /* Reduz a altura máxima no celular */
     }
 
+    /* Ajuste de padding para celulares em todos os blocos */
     .preco-categoria,
     .card-info,
     #instrucoes,
