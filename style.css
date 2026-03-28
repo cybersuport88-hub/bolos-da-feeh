@@ -16,7 +16,6 @@ body {
     position: relative;
 }
 
-/* Overlay branco com 40% de transparência sobre a imagem de fundo */
 body::before {
     content: '';
     position: fixed;
@@ -37,13 +36,11 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 850px; /* ATUALIZADO: Largura igual aos outros blocos */
+    max-width: 850px; 
     margin: 0 auto;
-    /* ATUALIZADO: Fundo com a mesma transparência dos outros itens */
-    background: rgba(255, 255, 255, 1.00); 
+    background: rgba(255, 255, 255, 0.88); 
     padding: 50px 30px;
     border-radius: 28px;
-    /* Sombra suave e elegante em volta do cartão */
     box-shadow: 0 10px 40px rgba(194, 73, 118, 0.15); 
 }
 
@@ -53,7 +50,7 @@ header {
     font-weight: 700;
     letter-spacing: 1px;
     margin: 0;
-    line-height: 1.1; /* Juntou mais as linhas BOLOS DA e FEEH */
+    line-height: 1.1; 
     color: #c24976;
     text-align: center;
 }
@@ -68,7 +65,6 @@ header {
     text-align: center;
 }
 
-/* A linha fina rosada que separa o título do telefone */
 .linha-divisoria {
     width: 90%;
     height: 1px;
@@ -84,18 +80,17 @@ header {
     text-align: center;
 }
 
-/* O logotipo fundido no cartão, sem recortes redondos! */
 .header-logo-block {
     margin-top: 35px;
     text-align: center;
 }
 
 .header-logo-block img {
-    width: 550px;
+    width: 350px;
     height: auto;
-    border-radius: 0; /* Remove o corte redondo */
-    box-shadow: none; /* Remove a sombra da imagem */
-    border: none;     /* Remove a borda branca */
+    border-radius: 0;
+    box-shadow: none;
+    border: none;
     display: block;
     margin: 0 auto;
 }
@@ -121,6 +116,68 @@ h2 {
     letter-spacing: 1px;
 }
 
+/* --- NOVO ESTILO: CARROSSEL DE FOTOS --- */
+.carrossel-container {
+    position: relative;
+    max-width: 100%;
+    margin: 40px auto;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 6px solid white;
+    box-shadow: 0 10px 40px rgba(194, 73, 118, 0.2);
+    background-color: white; 
+}
+
+.slide {
+    display: none; 
+    width: 100%;
+}
+
+.slide.ativa {
+    display: block; 
+    animation: fade 0.8s; 
+}
+
+.slide img {
+    width: 100%;
+    max-height: 500px; 
+    object-fit: cover; 
+    display: block;
+}
+
+/* Botões do Carrossel */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.3s ease;
+    border-radius: 0 8px 8px 0;
+    user-select: none;
+    background-color: rgba(194, 73, 118, 0.6); 
+    border: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 8px 0 0 8px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(194, 73, 118, 1); 
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+/* --- BLOCOS DE INFORMAÇÕES --- */
 .info-gramas {
     text-align: center;
     font-weight: 500;
@@ -133,27 +190,6 @@ h2 {
     border-left: 4px solid #c24976;
 }
 
-/* --- FOTO DESTAQUE DO BOLO --- */
-.foto-destaque {
-    text-align: center;
-    margin: 40px 0;
-}
-
-.foto-destaque img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 20px;
-    border: 6px solid white;
-    box-shadow: 0 10px 40px rgba(194, 73, 118, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.foto-destaque img:hover {
-    transform: scale(1.02);
-    box-shadow: 0 15px 50px rgba(194, 73, 118, 0.3);
-}
-
-/* --- BLOCOS DE INFORMAÇÕES --- */
 .preco-categoria,
 .card-info,
 #instrucoes {
@@ -173,7 +209,6 @@ h2 {
     box-shadow: 0 12px 40px rgba(194, 73, 118, 0.18);
 }
 
-/* --- ESTILOS INTERNOS DOS BLOCOS --- */
 .preco-categoria h3 {
     background: #c24976;
     color: white;
@@ -308,7 +343,6 @@ footer {
     text-shadow: 0 0 15px rgba(194, 73, 118, 0.4);
 }
 
-/* FOTO DA ASSINATURA */
 .foto-perfil-agradecimento {
     width: 121px;
     height: 121px;
@@ -338,7 +372,7 @@ footer {
 
 .sugestao-sabor p {
     margin: 0;
-    font-size: 0.8em;
+    font-size: 1.2em;
     font-weight: 600;
     color: #c24976;
     font-style: italic;
@@ -353,7 +387,7 @@ footer {
 
     .cartao-cabecalho {
         padding: 40px 20px;
-        max-width: 95%; /* Mantém o formato de cartão no celular */
+        max-width: 95%; 
     }
     
     .logo-textual-title {
@@ -366,7 +400,7 @@ footer {
     }
 
     .header-logo-block img {
-        width: 200px; /* Reduz um pouco o tamanho do logo no celular */
+        width: 250px; 
     }
 
     main {
@@ -375,6 +409,10 @@ footer {
 
     h2 {
         font-size: 1.7em;
+    }
+
+    .slide img {
+        max-height: 300px; 
     }
 
     .preco-categoria,
