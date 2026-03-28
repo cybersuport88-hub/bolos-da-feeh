@@ -180,7 +180,8 @@ h2 {
 /* --- BLOCOS DE INFORMAÇÕES --- */
 .info-gramas {
     text-align: center;
-    font-weight: 500;
+    font-size: 1.2em; /* TAMANHO DA LETRA AUMENTADO AQUI! */
+    font-weight: 600; /* Deixei a letra um pouquinho mais gordinha/negrito para dar mais leitura */
     color: #4a2c20;
     margin-bottom: 35px;
     background: rgba(255, 255, 255, 0.85);
@@ -188,6 +189,7 @@ h2 {
     border-radius: 18px;
     box-shadow: 0 6px 20px rgba(194, 73, 118, 0.1);
     border-left: 4px solid #c24976;
+}
 }
 
 .preco-categoria,
