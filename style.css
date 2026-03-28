@@ -36,11 +36,13 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 850px; 
+    max-width: 850px; /* Largura padrão alinhada com os outros blocos */
     margin: 0 auto;
+    /* Fundo com transparência (88%) */
     background: rgba(255, 255, 255, 0.88); 
     padding: 50px 30px;
     border-radius: 28px;
+    /* Sombra suave e elegante em volta do cartão */
     box-shadow: 0 10px 40px rgba(194, 73, 118, 0.15); 
 }
 
@@ -86,7 +88,7 @@ header {
 }
 
 .header-logo-block img {
-    width: 350px;
+    width: 350px; /* Tamanho da logo aumentado (anteriormente 250px) */
     height: auto;
     border-radius: 0;
     box-shadow: none;
@@ -116,7 +118,7 @@ h2 {
     letter-spacing: 1px;
 }
 
-/* --- NOVO ESTILO: CARROSSEL DE FOTOS --- */
+/* --- CARROSSEL DE FOTOS --- */
 .carrossel-container {
     position: relative;
     max-width: 100%;
@@ -138,10 +140,12 @@ h2 {
     animation: fade 0.8s; 
 }
 
+/* ESTILO ATUALIZADO: Área das fotos dos bolos aumentada! */
 .slide img {
     width: 100%;
-    max-height: 500px; 
-    object-fit: cover; 
+    /* ATUALIZADO: Aumentado de 500px para 650px para dar mais destaque */
+    max-height: 650px; 
+    object-fit: cover; /* Mantém a imagem proporcional sem distorcer */
     display: block;
 }
 
@@ -372,7 +376,7 @@ footer {
 
 .sugestao-sabor p {
     margin: 0;
-    font-size: 0.8em;
+    font-size: 1.2em; /* Tamanho da fonte aumentado */
     font-weight: 600;
     color: #c24976;
     font-style: italic;
@@ -411,8 +415,10 @@ footer {
         font-size: 1.7em;
     }
 
+    /* ESTILO ATUALIZADO: Área das fotos dos bolos aumentada no celular! */
     .slide img {
-        max-height: 300px; 
+        /* ATUALIZADO: Aumentado de 300px para 400px no celular */
+        max-height: 400px; 
     }
 
     .preco-categoria,
