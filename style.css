@@ -180,7 +180,7 @@ h2 {
 /* --- BLOCOS DE INFORMAÇÕES --- */
 .info-gramas {
     text-align: center;
-    font-size: 1.2em; /* TAMANHO DA LETRA AUMENTADO AQUI! */
+    font-size: 0.8em; /* TAMANHO DA LETRA AUMENTADO AQUI! */
     font-weight: 600; /* Deixei a letra um pouquinho mais gordinha/negrito para dar mais leitura */
     color: #4a2c20;
     margin-bottom: 35px;
