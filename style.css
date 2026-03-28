@@ -88,7 +88,7 @@ header {
 }
 
 .header-logo-block img {
-    width: 350px; /* Tamanho da logo aumentado (anteriormente 250px) */
+    width: 350px; /* Tamanho da logo aumentado */
     height: auto;
     border-radius: 0;
     box-shadow: none;
@@ -127,7 +127,8 @@ h2 {
     overflow: hidden;
     border: 6px solid white;
     box-shadow: 0 10px 40px rgba(194, 73, 118, 0.2);
-    background-color: white; 
+    /* ATUALIZADO: Fundo rosa claro para preencher as margens suaves */
+    background-color: #f9e9f0; 
 }
 
 .slide {
@@ -140,12 +141,13 @@ h2 {
     animation: fade 0.8s; 
 }
 
-/* ESTILO ATUALIZADO: Área das fotos dos bolos aumentada! */
+/* ESTILO ATUALIZADO: Fotos inteiras e sem cortes! */
 .slide img {
     width: 100%;
-    /* ATUALIZADO: Aumentado de 500px para 650px para dar mais destaque */
+    /* Mantém a altura máxima anterior para destaque */
     max-height: 650px; 
-    object-fit: cover; /* Mantém a imagem proporcional sem distorcer */
+    /* ATUALIZADO: 'contain' exibe a foto inteira sem cortar nada */
+    object-fit: contain; 
     display: block;
 }
 
@@ -276,170 +278,4 @@ li:last-child {
 
 /* --- BOTÃO DO WHATSAPP --- */
 .btn-whatsapp {
-    display: block;
-    background: linear-gradient(135deg, #25d366 0%, #1ebe5d 100%);
-    color: white;
-    text-align: center;
-    padding: 20px 25px;
-    text-decoration: none;
-    border-radius: 50px;
-    font-weight: 700;
-    font-size: 1.1em;
-    margin: 50px auto;
-    max-width: 400px;
-    transition: all 0.3s ease;
-    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4),
-                0 3px 10px rgba(0, 0, 0, 0.15);
-    letter-spacing: 1px;
-}
-
-.btn-whatsapp:hover {
-    background: linear-gradient(135deg, #1ebe5d 0%, #19b055 100%);
-    transform: translateY(-4px);
-    box-shadow: 0 10px 30px rgba(37, 211, 102, 0.5),
-                0 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-.btn-whatsapp:active {
-    transform: translateY(-2px);
-}
-
-/* --- RODAPÉ --- */
-footer {
-    max-width: 850px;
-    margin: 20px auto 60px auto;
-    padding: 50px 30px;
-    background: rgba(255, 255, 255, 0.85);
-    border-radius: 25px;
-    box-shadow: 0 15px 50px rgba(194, 73, 118, 0.15);
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    text-align: center;
-}
-
-.agradecimento-feeh {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.agradecimento-feeh p {
-    margin: 8px 0;
-    font-size: 1.1em;
-    font-weight: 500;
-    color: #5a3a40;
-}
-
-.instagram-link-footer {
-    margin-top: 20px;
-}
-
-.instagram-link-footer a {
-    color: #c24976;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 1.2em;
-    transition: all 0.3s ease;
-}
-
-.instagram-link-footer a:hover {
-    color: #d1618c;
-    text-decoration: none;
-    text-shadow: 0 0 15px rgba(194, 73, 118, 0.4);
-}
-
-.foto-perfil-agradecimento {
-    width: 121px;
-    height: 121px;
-    border-radius: 50%;
-    border: 5px solid white;
-    object-fit: cover;
-    margin-top: 30px;
-    box-shadow: 0 6px 20px rgba(194, 73, 118, 0.25);
-    transition: transform 0.3s ease;
-}
-
-.foto-perfil-agradecimento:hover {
-    transform: scale(1.08);
-}
-
-/* --- SUGESTÃO DE SABOR --- */
-.sugestao-sabor {
-    background: rgba(255, 255, 255, 0.90);
-    padding: 25px 30px;
-    border-radius: 20px;
-    text-align: center;
-    max-width: 80%;
-    margin: 40px auto 35px auto;
-    box-shadow: 0 8px 30px rgba(194, 73, 118, 0.15);
-    border: 2px solid rgba(194, 73, 118, 0.3);
-}
-
-.sugestao-sabor p {
-    margin: 0;
-    font-size: 1.2em; /* Tamanho da fonte aumentado */
-    font-weight: 600;
-    color: #c24976;
-    font-style: italic;
-    letter-spacing: 0.3px;
-}
-
-/* --- RESPONSIVIDADE --- */
-@media (max-width: 600px) {
-    header {
-        padding: 30px 15px 15px 15px;
-    }
-
-    .cartao-cabecalho {
-        padding: 40px 20px;
-        max-width: 95%; 
-    }
-    
-    .logo-textual-title {
-        font-size: 2.8em;
-    }
-
-    .logo-textual-subtitle {
-        font-size: 0.75em;
-        letter-spacing: 3px;
-    }
-
-    .header-logo-block img {
-        width: 250px; 
-    }
-
-    main {
-        padding: 10px 15px;
-    }
-
-    h2 {
-        font-size: 1.7em;
-    }
-
-    /* ESTILO ATUALIZADO: Área das fotos dos bolos aumentada no celular! */
-    .slide img {
-        /* ATUALIZADO: Aumentado de 300px para 400px no celular */
-        max-height: 400px; 
-    }
-
-    .preco-categoria,
-    .card-info,
-    #instrucoes {
-        padding: 20px;
-    }
-
-    .btn-whatsapp {
-        max-width: 90%;
-        font-size: 1em;
-        padding: 16px;
-    }
-
-    footer {
-        margin: 15px auto 30px auto;
-        padding: 35px 20px;
-    }
-
-    .foto-perfil-agradecimento {
-        width: 90px;
-        height: 90px;
-    }
-}
+    display
