@@ -57,25 +57,25 @@
                     <img src="bolo10.jpg" alt="Bolo 10">
                 </div>
                 <div class="slide">
-                    <img src="bolo11.jpg" alt="Bolo 11">
+                    <img src="bolo11.jpg" alt="Agnes 2 meses (Meninas Superpoderosas)">
                 </div>
                 <div class="slide">
-                    <img src="bolo12.jpg" alt="Bolo 12">
+                    <img src="bolo12.jpg" alt="Vinicius 15 anos">
                 </div>
                 <div class="slide">
-                    <img src="bolo13.jpg" alt="Bolo 13">
+                    <img src="bolo13.jpg" alt="Leila Flores">
                 </div>
                 <div class="slide">
-                    <img src="bolo14.jpg" alt="Bolo 14">
+                    <img src="bolo14.jpg" alt="Bolo Retangular Cerejas">
                 </div>
                 <div class="slide">
-                    <img src="bolo15.jpg" alt="Bolo 15">
+                    <img src="bolo15.jpg" alt="Regiane Flork">
                 </div>
                 <div class="slide">
-                    <img src="bolo16.jpg" alt="Bolo 16">
+                    <img src="bolo16.jpg" alt="Detalhe Retangular Cerejas">
                 </div>
                 <div class="slide">
-                    <img src="bolo17.jpg" alt="Bolo 17">
+                    <img src="bolo17.jpg" alt="Luiz Otávio 1 mês (Páscoa)">
                 </div>
                 
                 <button class="prev" onclick="mudarSlide(-1)">&#10094;</button>
@@ -157,7 +157,16 @@
         </div>
     </footer>
 
+    <!-- A estrutura da Janela Modal que amplia a foto (ESSA PARTE ESTAVA FALTANDO!) -->
+    <div id="modalImagem" class="modal">
+        <span class="fechar">&times;</span>
+        <img class="modal-conteudo" id="imgAmpliada">
+        <div id="legenda"></div>
+    </div>
+
+    <!-- CÓDIGOS DE FUNCIONAMENTO (JAVASCRIPT) -->
     <script>
+        // LÓGICA DO CARROSSEL
         let slideIndex = 1;
         
         function mudarSlide(n) {
@@ -174,10 +183,46 @@
             slides[slideIndex-1].classList.add("ativa");
         }
 
-        // Passar automaticamente a cada 4 segundos (4000 milissegundos)
-        setInterval(function() {
+        // Passar automaticamente a cada 4 segundos
+        let timerCarrossel = setInterval(function() {
             mudarSlide(1);
         }, 4000);
+
+
+        // LÓGICA DA IMAGEM AMPLIADA (MODAL) QUE FAZ O CLIQUE FUNCIONAR
+        let modal = document.getElementById("modalImagem");
+        let imgAmpliada = document.getElementById("imgAmpliada");
+        let legendaTexto = document.getElementById("legenda");
+        let imagens = document.querySelectorAll(".slide img");
+        let spanFechar = document.getElementsByClassName("fechar")[0];
+
+        // Só executa se o modal existir na tela
+        if (modal && spanFechar) {
+            // Adiciona a ação de clique em todas as imagens do carrossel
+            imagens.forEach(function(img) {
+                img.onclick = function(){
+                    modal.style.display = "block";
+                    imgAmpliada.src = this.src; // Pega a imagem clicada
+                    legendaTexto.innerHTML = this.alt; // Pega o nome do bolo para pôr de legenda
+                    clearInterval(timerCarrossel); // Pausa o carrossel enquanto a foto está aberta
+                }
+            });
+
+            // Quando clica no botão (X), fecha a imagem
+            spanFechar.onclick = function() {
+                modal.style.display = "none";
+                // Volta a rodar o carrossel
+                timerCarrossel = setInterval(function() { mudarSlide(1); }, 4000);
+            }
+
+            // Se clicar em qualquer lugar fora da imagem escura, fecha também
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                    timerCarrossel = setInterval(function() { mudarSlide(1); }, 4000);
+                }
+            }
+        }
     </script>
 
 </body>
