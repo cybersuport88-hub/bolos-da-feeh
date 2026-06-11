@@ -80,9 +80,8 @@
                 <div class="slide">
                     <img src="bolo18.jpg" alt="Bolo 18">
                 </div>
-                <!-- O BOLO 19 COM O ATRIBUTO DE VÍDEO ATUALIZADO COM ?v=2 -->
                 <div class="slide">
-                    <img src="bolo19.jpg" alt="Bolo 19" data-video="video_bolo19.mp4?v=2">
+                    <img src="bolo19.jpg" alt="Bolo 19">
                 </div>
                 <div class="slide">
                     <img src="bolo20.jpg" alt="Bolo 20">
@@ -170,17 +169,12 @@
         </div>
     </footer>
 
-    <!-- A estrutura da Janela Modal que amplia a foto ou toca o vídeo -->
     <div id="modalImagem" class="modal">
         <span class="fechar">&times;</span>
-        <!-- Imagem ampliada -->
         <img class="modal-conteudo" id="imgAmpliada">
-        <!-- Vídeo ampliado (fica escondido até ser chamado) -->
-        <video class="modal-conteudo" id="videoAmpliado" controls style="display: none;"></video>
         <div id="legenda"></div>
     </div>
 
-    <!-- CÓDIGOS DE FUNCIONAMENTO (JAVASCRIPT) -->
     <script>
         // LÓGICA DO CARROSSEL
         let slideIndex = 1;
@@ -204,68 +198,37 @@
             mudarSlide(1);
         }, 4000);
 
-        // LÓGICA DA IMAGEM E VÍDEO AMPLIADOS (MODAL)
+        // LÓGICA DA IMAGEM AMPLIADA (MODAL) QUE FAZ O CLIQUE FUNCIONAR
         let modal = document.getElementById("modalImagem");
         let imgAmpliada = document.getElementById("imgAmpliada");
-        let videoAmpliado = document.getElementById("videoAmpliado");
         let legendaTexto = document.getElementById("legenda");
         let imagens = document.querySelectorAll(".slide img");
         let spanFechar = document.getElementsByClassName("fechar")[0];
 
+        // Só executa se o modal existir na tela
         if (modal && spanFechar) {
+            // Adiciona a ação de clique em todas as imagens do carrossel
             imagens.forEach(function(img) {
                 img.onclick = function(){
                     modal.style.display = "block";
-                    legendaTexto.innerHTML = this.alt;
-                    clearInterval(timerCarrossel); 
-
-                    // Verifica se a imagem tem um vídeo associado
-                    let arquivoVideo = this.getAttribute("data-video");
-
-                    if (arquivoVideo) {
-                        // Se tem vídeo: esconde a foto, mostra o vídeo
-                        imgAmpliada.style.display = "none";
-                        videoAmpliado.style.display = "block";
-                        
-                        // Diz para o navegador qual é o vídeo e FORÇA ele a carregar
-                        videoAmpliado.src = arquivoVideo;
-                        videoAmpliado.load(); 
-                        
-                        // Tenta dar o play. Se o navegador bloquear, não "quebra" o site.
-                        let tentarTocar = videoAmpliado.play();
-                        if (tentarTocar !== undefined) {
-                            tentarTocar.catch(function(erro) {
-                                console.log("O navegador bloqueou o play automático. É só clicar no play manual.");
-                            });
-                        }
-                    } else {
-                        // Se não tem vídeo: garante que o vídeo pare, esconde ele e mostra a foto
-                        videoAmpliado.pause();
-                        videoAmpliado.removeAttribute('src'); // Limpa o endereço completamente
-                        videoAmpliado.load(); // Força a limpeza
-                        videoAmpliado.style.display = "none";
-                        imgAmpliada.style.display = "block";
-                        imgAmpliada.src = this.src;
-                    }
+                    imgAmpliada.src = this.src; // Pega a imagem clicada
+                    legendaTexto.innerHTML = this.alt; // Pega o nome do bolo para pôr de legenda
+                    clearInterval(timerCarrossel); // Pausa o carrossel enquanto a foto está aberta
                 }
             });
 
-            // Função para fechar e limpar tudo
-            function fecharModal() {
+            // Quando clica no botão (X), fecha a imagem
+            spanFechar.onclick = function() {
                 modal.style.display = "none";
-                videoAmpliado.pause(); // Para o vídeo imediatamente
-                videoAmpliado.removeAttribute('src'); // Remove o vídeo da memória
-                videoAmpliado.load(); // Confirma a limpeza pro navegador não travar
+                // Volta a rodar o carrossel
                 timerCarrossel = setInterval(function() { mudarSlide(1); }, 4000);
             }
 
-            spanFechar.onclick = function() {
-                fecharModal();
-            }
-
+            // Se clicar em qualquer lugar fora da imagem escura, fecha também
             window.onclick = function(event) {
                 if (event.target == modal) {
-                    fecharModal();
+                    modal.style.display = "none";
+                    timerCarrossel = setInterval(function() { mudarSlide(1); }, 4000);
                 }
             }
         }
