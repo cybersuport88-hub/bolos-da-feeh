@@ -80,6 +80,7 @@
                 <div class="slide">
                     <img src="bolo18.jpg" alt="Bolo 18">
                 </div>
+                <!-- O BOLO 19 COM O ATRIBUTO DE VÍDEO -->
                 <div class="slide">
                     <img src="bolo19.jpg" alt="Bolo 19" data-video="video_bolo19.mp4">
                 </div>
@@ -169,13 +170,17 @@
         </div>
     </footer>
 
+    <!-- A estrutura da Janela Modal que amplia a foto ou toca o vídeo -->
     <div id="modalImagem" class="modal">
         <span class="fechar">&times;</span>
+        <!-- Imagem ampliada -->
         <img class="modal-conteudo" id="imgAmpliada">
+        <!-- Vídeo ampliado (fica escondido até ser chamado) -->
         <video class="modal-conteudo" id="videoAmpliado" controls style="display: none;"></video>
         <div id="legenda"></div>
     </div>
 
+    <!-- CÓDIGOS DE FUNCIONAMENTO (JAVASCRIPT) -->
     <script>
         // LÓGICA DO CARROSSEL
         let slideIndex = 1;
@@ -218,15 +223,26 @@
                     let arquivoVideo = this.getAttribute("data-video");
 
                     if (arquivoVideo) {
-                        // Se tem vídeo: esconde a foto, mostra o vídeo e dá play
+                        // Se tem vídeo: esconde a foto, mostra o vídeo
                         imgAmpliada.style.display = "none";
                         videoAmpliado.style.display = "block";
+                        
+                        // Diz para o navegador qual é o vídeo e FORÇA ele a carregar
                         videoAmpliado.src = arquivoVideo;
-                        videoAmpliado.play();
+                        videoAmpliado.load(); 
+                        
+                        // Tenta dar o play. Se o navegador bloquear, não "quebra" o site.
+                        let tentarTocar = videoAmpliado.play();
+                        if (tentarTocar !== undefined) {
+                            tentarTocar.catch(function(erro) {
+                                console.log("O navegador bloqueou o play automático. É só clicar no play manual.");
+                            });
+                        }
                     } else {
                         // Se não tem vídeo: garante que o vídeo pare, esconde ele e mostra a foto
                         videoAmpliado.pause();
-                        videoAmpliado.src = "";
+                        videoAmpliado.removeAttribute('src'); // Limpa o endereço completamente
+                        videoAmpliado.load(); // Força a limpeza
                         videoAmpliado.style.display = "none";
                         imgAmpliada.style.display = "block";
                         imgAmpliada.src = this.src;
@@ -238,7 +254,8 @@
             function fecharModal() {
                 modal.style.display = "none";
                 videoAmpliado.pause(); // Para o vídeo imediatamente
-                videoAmpliado.src = ""; // Remove o vídeo da memória
+                videoAmpliado.removeAttribute('src'); // Remove o vídeo da memória
+                videoAmpliado.load(); // Confirma a limpeza pro navegador não travar
                 timerCarrossel = setInterval(function() { mudarSlide(1); }, 4000);
             }
 
