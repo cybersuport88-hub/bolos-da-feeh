@@ -126,6 +126,24 @@
                 <button class="prev" onclick="mudarSlide(-1)">&#10094;</button>
                 <button class="next" onclick="mudarSlide(1)">&#10095;</button>
             </div>
+
+            <!-- INÍCIO DA NOVA GALERIA DE MINIATURAS -->
+            <div class="sessao-galeria">
+                <h3 class="titulo-galeria">Galeria Completa</h3>
+                <div class="quadro-miniaturas">
+                    <img src="bolo01.jpg" alt="Bolo 01" class="miniatura">
+                    <img src="bolo02.jpg" alt="Bolo 02" class="miniatura">
+                    <img src="bolo03.jpg" alt="Bolo 03" class="miniatura">
+                    <img src="bolo04.jpg" alt="Bolo 04" class="miniatura">
+                    <img src="bolo05.jpg" alt="Bolo 05" class="miniatura">
+                    <img src="bolo06.jpg" alt="Bolo 06" class="miniatura">
+                    <img src="bolo07.jpg" alt="Bolo 07" class="miniatura">
+                    <img src="bolo08.jpg" alt="Bolo 08" class="miniatura">
+                    <!-- Pode ir adicionando as outras fotos aqui seguindo esse formato -->
+                </div>
+            </div>
+            <!-- FIM DA NOVA GALERIA DE MINIATURAS -->
+
             <p class="info-gramas">Massa: Baunilha ou Chocolate.         Escolha até 2 recheios.</p>
 
             <div class="preco-categoria">
@@ -231,33 +249,29 @@
             mudarSlide(1);
         }, 4000);
 
-        // LÓGICA DA IMAGEM AMPLIADA (MODAL) QUE FAZ O CLIQUE FUNCIONAR
+        // LÓGICA DA IMAGEM AMPLIADA (MODAL)
         let modal = document.getElementById("modalImagem");
         let imgAmpliada = document.getElementById("imgAmpliada");
         let legendaTexto = document.getElementById("legenda");
-        let imagens = document.querySelectorAll(".slide img");
+        // A MUDANÇA ACONTECEU AQUI: pegando fotos do carrossel E da miniatura
+        let imagens = document.querySelectorAll(".slide img, .miniatura");
         let spanFechar = document.getElementsByClassName("fechar")[0];
 
-        // Só executa se o modal existir na tela
         if (modal && spanFechar) {
-            // Adiciona a ação de clique em todas as imagens do carrossel
             imagens.forEach(function(img) {
                 img.onclick = function(){
                     modal.style.display = "block";
-                    imgAmpliada.src = this.src; // Pega a imagem clicada
-                    legendaTexto.innerHTML = this.alt; // Pega o nome do bolo para pôr de legenda
-                    clearInterval(timerCarrossel); // Pausa o carrossel enquanto a foto está aberta
+                    imgAmpliada.src = this.src; 
+                    legendaTexto.innerHTML = this.alt; 
+                    clearInterval(timerCarrossel); 
                 }
             });
 
-            // Quando clica no botão (X), fecha a imagem
             spanFechar.onclick = function() {
                 modal.style.display = "none";
-                // Volta a rodar o carrossel
                 timerCarrossel = setInterval(function() { mudarSlide(1); }, 4000);
             }
 
-            // Se clicar em qualquer lugar fora da imagem escura, fecha também
             window.onclick = function(event) {
                 if (event.target == modal) {
                     modal.style.display = "none";
